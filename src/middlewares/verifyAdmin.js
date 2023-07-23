@@ -1,7 +1,8 @@
 const verifyAdmin = async (req, res, next) => {
-    // const email = req.body.email;
+    const email = req.body.email;
     const userCollection = req.db.collection('users');
-    const query = { email: "rifatsaown0@gmail.com" };
+    const query = { email: email };
+    // const query = { email: "rifatsaown0@gmail.com" };
 
     try{
         const user = await userCollection.findOne(query);

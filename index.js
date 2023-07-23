@@ -27,8 +27,8 @@ connectToDatabase().then(() => {
     });
 
     // Routes Import
-    const openRoutes = require('./routes/openRoutes')
-    const adminRoutes = require('./routes/adminRoutes')
+    const openRoutes = require('./src/routes/openRoutes')
+    const adminRoutes = require('./src/routes/adminRoutes')
 
     // Routes Use 
     app.use('/api', openRoutes)
