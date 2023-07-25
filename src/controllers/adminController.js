@@ -1,7 +1,7 @@
 // Add item to menu
-const addItemToMenu = async (req, res) => {
+const addRoom = async (req, res) => {
     try {
-        const menuCollection = req.db.collection("menu");
+        const menuCollection = req.db.collection("rooms");
         const item = {
             name: "Chicken Burger",
             price: 250,
@@ -10,7 +10,7 @@ const addItemToMenu = async (req, res) => {
         };
 
         const result = await menuCollection.insertOne(item);
-        console.log("Item added to menu");
+        console.log("Room Added");
         res.send(result);
         
     } catch (error) {
@@ -19,4 +19,4 @@ const addItemToMenu = async (req, res) => {
     }
 };
 
-module.exports = { addItemToMenu };
+module.exports = { addRoom };
